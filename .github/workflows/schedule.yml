@@ -2,12 +2,12 @@ name: Scheduled Robot
 
 on:
   schedule:
-    - cron: "*/1 * * * *"   # Every 5 minutes
+    - cron: "*/5 * * * *"  # Runs every 5 mins (recommended minimum)
+  workflow_dispatch:      # <--- ADD THIS LINE
 
 jobs:
   run-job:
     runs-on: ubuntu-latest
-
     steps:
       - name: Print Message
         run: echo "Hello Vamshi 🚀 This runs every 5 minutes!"
