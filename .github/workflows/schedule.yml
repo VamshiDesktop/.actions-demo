@@ -1,0 +1,13 @@
+name: Scheduled Robot
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # Every 5 minutes
+
+jobs:
+  run-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Message
+        run: echo "Hello Vamshi 🚀 This runs every 5 minutes!"
